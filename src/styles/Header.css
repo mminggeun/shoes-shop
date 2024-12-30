@@ -1,0 +1,47 @@
+/* Header.css */
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1e1e;
+    padding: 18px 3%;
+    color: white;
+}
+
+.header2-1 .logo {
+    font-size: 34px; /* 글자 크기를 더 크게 설정 */
+    font-weight: bold; /* 굵게 설정 */
+    color: white; /* 글자 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    margin-right: 20px; /* 오른쪽 간격 */
+    margin-top: -12px;
+}
+
+.header2-1 {
+    margin-top: 5px;
+}
+
+.header2-2 {
+    margin-top: -5px;
+}
+
+.header2-1, .header2-2 {
+    display: flex;
+    gap: 70px;
+}
+
+.header2-1 a, .header2-2 a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    font-weight: bolder;
+}
+
+.header2-1 a:hover, .header2-2 a:hover {
+    color: #ffcc00; /* 마우스 오버 시 텍스트 색상 변경 */
+}
+
+.header2-1 a:active, .header2-2 a:active {
+    color: #ff6600; /* 클릭 시 텍스트 색상 변경 */
+}
