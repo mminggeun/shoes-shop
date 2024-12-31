@@ -1,33 +1,11 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import '../styles/Home.css';
-import adidas1 from '../assets/shoes/adidas1.png';
-import adidas2 from '../assets/shoes/adidas2.png';
-import adidas3 from '../assets/shoes/adidas3.png';
-import newbalance1 from '../assets/shoes/newbalance1.png';
-import newbalance2 from '../assets/shoes/newbalance2.png';
-import newbalance3 from '../assets/shoes/newbalance3.png';
-import keen1 from '../assets/shoes/keen1.png';
-import keen2 from '../assets/shoes/keen2.png';
-import keen3 from '../assets/shoes/keen3.png';
-import asics1 from '../assets/shoes/asics1.png';
-import asics2 from '../assets/shoes/asics2.png';
-import asics3 from '../assets/shoes/asics3.png';
-import adidaslogo from '../assets/logos/logo-adidas.png';
-import nikelogo from '../assets/logos/logo-nike.png';
-import keenlogo from '../assets/logos/logo-keen.png';
-import asicslogo from '../assets/logos/logo-asics.png';
+import {shoes, logos} from '../data/Shoesdata';
+
 
 function Home() {
-    const shoes = [
-        adidas1, adidas2, adidas3, newbalance1, newbalance2,
-        newbalance3, keen1, keen2, keen3, asics1, asics2, asics3
-    ];
-
-    const logos = [
-        adidaslogo, nikelogo, keenlogo,asicslogo
-    ];
-
+    
     const settings = {
         dots: true,
         infinite: true,
@@ -63,9 +41,10 @@ function Home() {
                 </div>
                 <div className="slider-container">
                     <Slider {...settings}>
-                    {shoes.map((image, index) => (
+                    {shoes.map((shoe, index) => (
                         <div key={index} className="slider-item">
-                        <img src={image} alt={`Slide ${index + 1}`} className="slider-image" />
+                        <img src={shoe.image} alt={shoe.name} className="slider-image" />
+                        <p className="slider-name">{shoe.name}</p>
                 </div>
                     ))}
                     </Slider>
@@ -79,11 +58,45 @@ function Home() {
                     브랜드별 상품
                 </div>
                 <div className="logos-container">
-                    {logos.map((image, index)=> (
+                    {logos.map((logo, index)=> (
                         <div key={index} className="logos-item">
-                        <img src={image} alt={`Logo ${index +1}`} className="logos-image" />
+                        <img src={logo.image} alt={logo.name} className="logos-image" />
+                        <p className="logo-name">{logo.name}</p>
                         </div>
                     ))}
+                </div>
+            </div>
+            <div className="home-container4">
+                <div className="new-shoes1">
+                    Full Collection
+                </div>
+                <div className="new-shoes2">
+                    전체상품
+                </div>
+                <div className="all-container">
+                    {shoes.map((shoe, index) => (
+                        <div key={index} className="all-item">
+                        <img src={shoe.image} alt={shoe.name} className="all-image" />
+                        <p className="all-name">{shoe.name}</p>
+                </div>
+                    ))}
+                </div>
+            </div>
+            <div className="home-container5">
+                <div className="homepage-bot">
+                    <p className="bot-text">
+                    크림 주식회사 · 대표 김창욱사업자등록번호 : 570-88-01618 
+                    사업자정보확인통신판매업 : 제 2021-성남분당C-0093호
+                    사업장소재지 : 경기도 성남시 분당구 분당내곡로 131 판교테크원 타워1, 7층호스팅 
+                    서비스 : 네이버 클라우드 ㈜</p> 
+                    <p className="bot-text">
+                        SHEWS(주)는 통신판매 중개자로서 통신판매의 당사자가 아닙니다. 
+                        본 상품은 개별 판매자가 등록한 상품으로 상품, 상품정보, 거래에 관한 의무와 책임은 각 판매자에게 있습니다.
+                    </p>
+                    <p className="bot-text">
+                        단, 이용약관 및 정책, 기타 거래 체결 과정에서 고지하는 
+                        내용 등에 따라 검수하고 보증하는 내용에 대한 책임은 SHEWS(주)에 있습니다.
+                    </p>
                 </div>
             </div>
         </>

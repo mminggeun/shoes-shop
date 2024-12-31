@@ -2,7 +2,7 @@
 .home-container1 {
     width: 100%;
     height: 40vh; /* 화면 전체 높이 */
-    background-image: url('../assets/moviesliders/movie slider2.png');
+    background-image: url('../assets/homepage-image/homepage2.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -111,6 +111,15 @@
     transform: scale(1.1); /* 호버 시 확대 효과 */
 }
 
+.slider-name {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    width: 180px;
+}
+
 /* Slick 기본 스타일 오버라이드 */
 .slick-prev,
 .slick-next {
@@ -133,7 +142,7 @@
 
 .brand-shoes1 {
     margin-left: 85px;
-    margin-top: 13px;
+    margin-top: 43px;
     font-size: 24px;
 }
 .brand-shoes2 {
@@ -151,13 +160,16 @@
 
 .logos-container {
     max-width: 100%; /* 슬라이더 너비 설정 */
-    margin: 30px 10px; /* 가운데 정렬 */
+    margin: 30px 50px; /* 가운데 정렬 */
+    margin-top: -5px;
+    display: flex;
 }
 
 .logos-item {
     display: flex;
-    padding:5px;
+    padding:30px;
     justify-content: center;
+    flex-direction: column; /* 세로 배치 */
 }
 
 /* 이미지 스타일 */
@@ -171,4 +183,91 @@
 
 .logos-image:hover {
     transform: scale(1.1); /* 호버 시 확대 효과 */
+}
+
+.logo-name {
+    margin-top: 15px; /* 필요에 따라 조정 */
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    width: 180px;
+    display: flex;
+    flex-direction: column; /* 세로 배치 */
+    align-items: center; /* 가운데 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+/* 배경 이미지와 컨테이너 설정 */
+.home-container4 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.all-container {
+    max-width: 100%; /* 슬라이더 너비 설정 */
+    margin: 10px 40px; /* 가운데 정렬 */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 슬라이더 아이템 */
+.all-item {
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    margin-left:45px;
+    width: 200px;
+}
+
+/* 이미지 스타일 */
+.all-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.all-image:hover {
+    transform: scale(1.1); /* 호버 시 확대 효과 */
+}
+
+.all-name {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    width: 180px;
+}
+
+.home-container5 {
+    padding: 20px 40px; /* 상하좌우 패딩 */
+    border-top: 0.5px solid #ddd; /* 위쪽 테두리 두께를 0.5px로 줄임 */
+    margin-top: 90px;
+    width: 80%; /* 너비를 80%로 제한 */
+    margin: 90px auto; /* 가운데 정렬 */
+    margin-bottom: 10px;
+}
+
+.homepage-bot {
+    max-width: 800px; /* 텍스트가 너무 길지 않게 제한 */
+    margin: 0 auto; /* 가운데 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    color: #333; /* 글자 색상 */
+    font-family: 'Arial', sans-serif; /* 글꼴 */
+    line-height: 1.6; /* 줄 간격 */
+}
+
+.bot-title {
+    font-size: 20px; /* 제목 크기 */
+    font-weight: bold; /* 제목 굵게 */
+    margin-bottom: 10px; /* 아래 간격 */
+    color: #201e1e; /* 제목 색상 */
+}
+
+.bot-text {
+    font-size: 14px; /* 본문 크기 */
+    margin-bottom: 10px; /* 아래 간격 */
+    color: #555; /* 본문 색상 */
 }
