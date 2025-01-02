@@ -165,6 +165,10 @@
     display: flex;
 }
 
+.brand-link{
+    text-decoration: none;
+}
+
 .logos-item {
     display: flex;
     padding:30px;

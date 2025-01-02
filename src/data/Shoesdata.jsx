@@ -38,10 +38,10 @@ import newbalancelogo from '../assets/logos/logo-newbalance.png';
         ];
 
     export const logos = [
-            {name: "Nike", image: nikelogo},
-            {name: "Adidas", image: adidaslogo},
-            {name: "NewBalance", image: newbalancelogo},
-            {name: "Asics", image: asicslogo},
-            {name: "Keen", image: keenlogo}
+            {name: "nike", image: nikelogo},
+            {name: "adidas", image: adidaslogo},
+            {name: "newbalance", image: newbalancelogo},
+            {name: "asics", image: asicslogo},
+            {name: "keen", image: keenlogo}
         ];
  

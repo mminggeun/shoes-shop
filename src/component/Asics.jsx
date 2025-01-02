@@ -1,23 +1,23 @@
-import '../styles/Nike.css';
+import '../styles/Asics.css';
 import {shoes} from '../data/Shoesdata';
-import nikepage from '../assets/logos/nikepage.png';
+import asicspage from '../assets/logos/asicspage.png';
 
-function Nike() {
+function Asics() {
 
-    const filternike = shoes.filter((shoe) => shoe.image.includes("nike"))
+    const filterasics = shoes.filter((shoe) => shoe.image.includes("asics"))
 
     return (
         <>
-            <div className="nike-container1">
-                <img src = {nikepage} className="nikecontainer" />
-                <div className="nike-lett1">
-                    Nike Collection 
+            <div className="asics-container1">
+                <img src = {asicspage} className="asicscontainer" />
+                <div className="asics-lett1">
+                    Asics Collection 
                 </div>
-                <div className="nike-lett2">
+                <div className="asics-lett2">
                     전체 상품
                 </div>
                     <div className="all-container">
-                        {filternike.map((shoe, index) => (
+                        {filterasics.map((shoe, index) => (
                                 <div key={index} className="all-item">
                                 <img src={shoe.image} className="all-image" />
                                 <p className="all-name">{shoe.name}</p>
@@ -29,4 +29,4 @@ function Nike() {
     )
 }
 
-export default Nike;
+export default Asics;

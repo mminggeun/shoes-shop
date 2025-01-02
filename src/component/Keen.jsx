@@ -1,23 +1,23 @@
-import '../styles/Nike.css';
+import '../styles/Keen.css';
 import {shoes} from '../data/Shoesdata';
-import nikepage from '../assets/logos/nikepage.png';
+import keenpage from '../assets/logos/keenpage.png';
 
-function Nike() {
+function Keen() {
 
-    const filternike = shoes.filter((shoe) => shoe.image.includes("nike"))
+    const filterkeen = shoes.filter((shoe) => shoe.image.includes("keen"))
 
     return (
         <>
-            <div className="nike-container1">
-                <img src = {nikepage} className="nikecontainer" />
-                <div className="nike-lett1">
-                    Nike Collection 
+            <div className="keen-container1">
+                <img src = {keenpage} className="keencontainer" />
+                <div className="keen-lett1">
+                    Keen Collection 
                 </div>
-                <div className="nike-lett2">
+                <div className="keen-lett2">
                     전체 상품
                 </div>
                     <div className="all-container">
-                        {filternike.map((shoe, index) => (
+                        {filterkeen.map((shoe, index) => (
                                 <div key={index} className="all-item">
                                 <img src={shoe.image} className="all-image" />
                                 <p className="all-name">{shoe.name}</p>
@@ -29,4 +29,4 @@ function Nike() {
     )
 }
 
-export default Nike;
+export default Keen;

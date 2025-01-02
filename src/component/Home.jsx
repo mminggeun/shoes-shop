@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import '../styles/Home.css';
 import {shoes, logos} from '../data/Shoesdata';
@@ -37,7 +38,7 @@ function Home() {
                     Just Dropped
                 </div>
                 <div className="new-shoes2">
-                    발매상품
+                    발매상품    
                 </div>
                 <div className="slider-container">
                     <Slider {...settings}>
@@ -60,8 +61,10 @@ function Home() {
                 <div className="logos-container">
                     {logos.map((logo, index)=> (
                         <div key={index} className="logos-item">
+                            <Link to={`/${logo.name}`} className="brand-link">
                         <img src={logo.image} alt={logo.name} className="logos-image" />
                         <p className="logo-name">{logo.name}</p>
+                            </Link>
                         </div>
                     ))}
                 </div>

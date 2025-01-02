@@ -8,10 +8,10 @@
                     <div className="header2-1">
                         <Link to="/" className="logo">SHEWS</Link>
                         <Link to="/nike">Nike</Link>
-                        <Link to="/">Aidas</Link>
-                        <Link to="/">NewBalance</Link>
-                        <Link to="/">Asics</Link>
-                        <Link to="/">Keen</Link>
+                        <Link to="/adidas">Aidas</Link>
+                        <Link to="/newbalance">NewBalance</Link>
+                        <Link to="/asics">Asics</Link>
+                        <Link to="/keen">Keen</Link>
                     </div>
                     <div className="header2-2">
                         <Link to="/">로그인</Link>
