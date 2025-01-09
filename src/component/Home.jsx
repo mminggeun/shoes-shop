@@ -1,12 +1,15 @@
-import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import React, { Component, useState } from "react";
+import { Link, useNavigate } from 'react-router-dom';
 import Slider from "react-slick";
 import '../styles/Home.css';
 import {shoes, logos} from '../data/Shoesdata';
 
 
-function Home() {
-    
+function Home({shoes}) {
+    const [searchTerm, setSearchTerm] = useState("");
+    const navigate = useNavigate();
+
+
     const settings = {
         dots: true,
         infinite: true,
@@ -16,6 +19,14 @@ function Home() {
         centerMode: true,
         centerPadding: "20px",
     };
+
+    const handleSearch = () => {
+        if (searchTerm.trim() !== "") {
+            navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
+        } else {
+            alert("검색어를 입력하세요!");
+        }
+    }
     
     return (
         <>
@@ -29,8 +40,10 @@ function Home() {
                         type="text"
                         placeholder="검색어를 입력하세요..."
                         className="search-input"
+                        value= {searchTerm}
+                        onChange={(e)=> setSearchTerm(e.target.value)}
                     />
-                    <button className="search-button">검색</button>
+                    <button className="search-button" onClick={handleSearch}>검색</button>
                 </div>
             </div>
             <div className="home-container2">
@@ -42,10 +55,12 @@ function Home() {
                 </div>
                 <div className="slider-container">
                     <Slider {...settings}>
-                    {shoes.map((shoe, index) => (
-                        <div key={index} className="slider-item">
+                    {shoes.map((shoe) => (
+                        <div key={shoe.id} className="slider-item">
+                        <Link to={`/shoes/${shoe.id}`} className="brand-link">
                         <img src={shoe.image} alt={shoe.name} className="slider-image" />
                         <p className="slider-name">{shoe.name}</p>
+                        </Link>
                 </div>
                     ))}
                     </Slider>
@@ -77,10 +92,12 @@ function Home() {
                     전체상품
                 </div>
                 <div className="all-container">
-                    {shoes.map((shoe, index) => (
-                        <div key={index} className="all-item">
+                    {shoes.map((shoe) => (
+                        <div key={shoe.id} className="all-item">
+                            <Link to={`/shoes/${shoe.id}`} className="brand-link">
                         <img src={shoe.image} alt={shoe.name} className="all-image" />
                         <p className="all-name">{shoe.name}</p>
+                            </Link>
                 </div>
                     ))}
                 </div>

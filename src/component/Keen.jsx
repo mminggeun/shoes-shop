@@ -1,5 +1,6 @@
 import '../styles/Keen.css';
 import {shoes} from '../data/Shoesdata';
+import { Link } from 'react-router-dom';
 import keenpage from '../assets/logos/keenpage.png';
 
 function Keen() {
@@ -17,10 +18,12 @@ function Keen() {
                     전체 상품
                 </div>
                     <div className="all-container">
-                        {filterkeen.map((shoe, index) => (
-                                <div key={index} className="all-item">
+                        {filterkeen.map((shoe) => (
+                                <div key={shoe.id} className="all-item">
+                                    <Link to={`/shoes/${shoe.id}`} className="brand-link">
                                 <img src={shoe.image} className="all-image" />
                                 <p className="all-name">{shoe.name}</p>
+                                </Link>
                                     </div>
                         ))}
                     </div>

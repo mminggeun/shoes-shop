@@ -20,21 +20,21 @@ import asicslogo from '../assets/logos/logo-asics.png';
 import newbalancelogo from '../assets/logos/logo-newbalance.png';
 
    export const shoes = [
-            {name: "Adidas Adizero Adios Pro 4 M Cloud White Core Black", image: adidas1},
-            {name: "Adidas Originals SL 72 RS Wonder Alumina Grey Two", image: adidas2},
-            {name: "Adidas Gazelle Indoor Craft Ochre Shadow Red", image: adidas3},
-            {name: "(W) Nike Air Force 1 Low Valentine's Day Sail Pink Foam", image: nike1},
-            {name: "Nike Air Zoom Spiridon Black Metallic Silver", image:  nike2},
-            {name: "Nike Zoom Vomero Roam Safety Orange and Gum Light Brown", image:  nike3},  
-            {name: "New Balance x District Vision Fresh Foam X Hierro v8 Magnet Black Beauty", image: newbalance1},
-            {name: "New Balance 9060 Slate Grey Arid Stone", image: newbalance2},
-            {name: "New Balance x Aime Leon Dore 993 Made in USA Green", image: newbalance3},
-            {name: "Keen Jasper Sneakers Women Silver Mink", image: keen1},
-            {name: "Keen Uneek Women Sandal Black", image: keen2},
-            {name: "Keen Howser III Slide Mule Men Charcoal Grey Felt&Black", image: keen3},
-            {name: "Asics x Bleach GT-2160 White Black", image: asics1},
-            {name: "Asics x Dime Gel-Quantum 360 VIII GTX Black Pure Silver", image: asics2},
-            {name: "Asics x Gallery Dept. Gel-K1011 Black", image: asics3}
+            {id: 1, name: "Adidas Adizero Adios Pro 4 M Cloud White Core Black", image: adidas1},
+            {id: 2, name: "Adidas Originals SL 72 RS Wonder Alumina Grey Two", image: adidas2},
+            {id: 3, name: "Adidas Gazelle Indoor Craft Ochre Shadow Red", image: adidas3},
+            {id: 4, name: "(W) Nike Air Force 1 Low Valentine's Day Sail Pink Foam", image: nike1},
+            {id: 5, name: "Nike Air Zoom Spiridon Black Metallic Silver", image:  nike2},
+            {id: 6, name: "Nike Zoom Vomero Roam Safety Orange and Gum Light Brown", image:  nike3},  
+            {id: 7, name: "New Balance x District Vision Fresh Foam X Hierro v8 Magnet Black Beauty", image: newbalance1},
+            {id: 8, name: "New Balance 9060 Slate Grey Arid Stone", image: newbalance2},
+            {id: 9, name: "New Balance x Aime Leon Dore 993 Made in USA Green", image: newbalance3},
+            {id: 10,name: "Keen Jasper Sneakers Women Silver Mink", image: keen1},
+            {id: 11, name: "Keen Uneek Women Sandal Black", image: keen2},
+            {id: 12, name: "Keen Howser III Slide Mule Men Charcoal Grey Felt&Black", image: keen3},
+            {id: 13, name: "Asics x Bleach GT-2160 White Black", image: asics1},
+            {id: 14, name: "Asics x Dime Gel-Quantum 360 VIII GTX Black Pure Silver", image: asics2},
+            {id: 15, name: "Asics x Gallery Dept. Gel-K1011 Black", image: asics3}
         ];
 
     export const logos = [

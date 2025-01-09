@@ -1,5 +1,6 @@
 import '../styles/Asics.css';
 import {shoes} from '../data/Shoesdata';
+import { Link } from 'react-router-dom';
 import asicspage from '../assets/logos/asicspage.png';
 
 function Asics() {
@@ -17,10 +18,12 @@ function Asics() {
                     전체 상품
                 </div>
                     <div className="all-container">
-                        {filterasics.map((shoe, index) => (
-                                <div key={index} className="all-item">
+                        {filterasics.map((shoe) => (
+                                <div key={shoe.id} className="all-item">
+                                    <Link to={`/shoes/${shoe.id}`} className="brand-link">
                                 <img src={shoe.image} className="all-image" />
                                 <p className="all-name">{shoe.name}</p>
+                                    </Link>
                                     </div>
                         ))}
                     </div>
